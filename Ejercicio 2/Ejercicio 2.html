@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mayor de 2 numeros</title>
+</head>
+<body>
+    <h1>Nota de un alumno</h1>  
+    <p>introduce las calificaciones del alumno:</p>  
+    Calificacion 1 <br>
+    <input id="num1"><br>  
+    Calificacion 2 <br>
+    <input id="num2"> <br>
+    Calificacion 3 <br>
+    <input id="num3"> <br>
+    <button type="button" onclick="myFunction()">Calcular</button>  
+    <p id="sumando"></p>  
+    <script>  
+    function myFunction() {  
+      var x,y,media,text;  
+      x = document.getElementById("num1").value;  
+      y = document.getElementById("num2").value;  
+      z = document.getElementById("num3").value; 
+      if (isNaN(x) || isNaN(y)) {  
+        text = "Es necesarios introducir dos números válidos";  
+      } else 
+      media=(parseFloat(x)+ parseFloat(y)+ parseFloat(z))/3;
+      if(media>=5){
+        text="El alumno aprobo exitosamente! :D  calificacion Final: "+media;
+      }else{
+        text="El alumno reprobo exitosamente! D: calificacion Final: "+media;
+      }
+      document.getElementById("sumando").innerHTML = text;
+    }  
+    </script>  
+</body>
+</html> 
+
+
